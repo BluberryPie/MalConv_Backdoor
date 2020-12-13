@@ -34,5 +34,9 @@
     "num_train_epochs": {
         "type": "int",
         "default": 5
+    },
+    "poisoned_sample_proportion": {
+        "type": "float",
+        "default": 0.2
     }
 }
