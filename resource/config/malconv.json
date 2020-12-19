@@ -3,6 +3,10 @@
         "type": "str",
         "default": "data/binaries"
     },
+    "model_filepath": {
+        "type": "str",
+        "default": "data/poisoned_model.pt"
+    },
     "embedding_dim": {
         "type": "int",
         "default": 8
@@ -33,7 +37,7 @@
     },
     "num_train_epochs": {
         "type": "int",
-        "default": 5
+        "default": 1
     },
     "poisoned_sample_proportion": {
         "type": "float",

@@ -46,7 +46,7 @@ if __name__ == '__main__':
                 total += test_y.shape[0]
 
             accuracy = correct / total
-            print('Epoch #{} Accuracy : {:.2f}'.format(epoch, accuracy))
+            print('Epoch #{} Accuracy : {:.4f}'.format(epoch, accuracy))
 
             success, total = 0, 0
             for _, (test_X, test_y) in enumerate(pe_test_loader_trojaned):
@@ -55,6 +55,6 @@ if __name__ == '__main__':
                 total += (test_y == 1).sum()
 
             attack_success_rate = success / total
-            print('Epoch #{} Attack Success Rate : {:.2f}'.format(epoch, attack_success_rate))
+            print('Epoch #{} Attack Success Rate : {:.4f}'.format(epoch, attack_success_rate))
 
-    torch.save(model.state_dict(), 'data/poisoned_model.pt')
+    torch.save(model.state_dict(), config.model_filepath)
